@@ -1,0 +1,28 @@
+{
+  "name": "hexo-tag-dailymotion",
+  "version": "1.0.0",
+  "description": "A tag plugin to embed Dailymotion video player in your Hexo blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-plugin",
+    "hexo-tag",
+    "plugin",
+    "tag",
+    "dailymotion",
+    "video"
+  ],
+  "author": "Olivier Audard <olivier@audard.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dharFr/hexo-tag-dailymotion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dharFr/hexo-tag-dailymotion/issues"
+  },
+  "homepage": "https://github.com/dharFr/hexo-tag-dailymotion#readme"
+}
