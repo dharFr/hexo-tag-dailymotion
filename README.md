@@ -1,7 +1,7 @@
 # hexo-tag-dailymotion
 A tag plugin to embed Dailymotion video player in your Hexo blog
 
-![npm](https://img.shields.io/npm/v/hexo-tag-dailymotion.svg)  ![npm](https://img.shields.io/npm/l/hexo-tag-dailymotion.svg)
+[![npm](https://img.shields.io/npm/v/hexo-tag-dailymotion.svg)](https://www.npmjs.com/package/hexo-tag-dailymotion)  [![npm](https://img.shields.io/npm/l/hexo-tag-dailymotion.svg)](https://github.com/dharFr/hexo-tag-dailymotion/blob/main/LICENSE)
 
 
 ## Installation
