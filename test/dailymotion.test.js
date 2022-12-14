@@ -110,3 +110,60 @@ test("With player, video & playlist parameter, renders a player script with data
 	assert(renderedNode.getAttribute('data-playlist') === 'x79dlo')
 })
 
+// <script src="https://geo.dailymotion.com/player/xakn.js" class="video-container" data-video="x84sh87" data-params="startTime=15"></script>
+test("With player, video & params parameter, renders a player script with data-video and data-params attributes", () => {
+	
+	const renderTag = dailymotionTag(['player:xakn', 'video:x84sh87', 'params:startTime=15'])
+	const renderedNode = parse(renderTag).firstChild
+
+	assert(renderedNode.tagName === 'SCRIPT')
+	assert(renderedNode.getAttribute('src') === 'https://geo.dailymotion.com/player/xakn.js')
+	assert(renderedNode.classList.contains('video-container'))
+	assert(renderedNode.getAttribute('data-video') === 'x84sh87')
+	assert(renderedNode.getAttribute('data-playlist') === undefined)
+	assert(renderedNode.getAttribute('data-params') === 'startTime=15')
+})
+
+// <script src="https://geo.dailymotion.com/player/xakn.js" class="video-container" data-video="x84sh87" data-params="startTime=15&mute=true"></script>
+test("With player, video & params parameter, renders a player script with data-video and data-params attributes", () => {
+	
+	const renderTag = dailymotionTag(['player:xakn', 'video:x84sh87', 'params:startTime=15&mute=true'])
+	const renderedNode = parse(renderTag).firstChild
+
+	assert(renderedNode.tagName === 'SCRIPT')
+	assert(renderedNode.getAttribute('src') === 'https://geo.dailymotion.com/player/xakn.js')
+	assert(renderedNode.classList.contains('video-container'))
+	assert(renderedNode.getAttribute('data-video') === 'x84sh87')
+	assert(renderedNode.getAttribute('data-playlist') === undefined)
+	assert(renderedNode.getAttribute('data-params') === 'startTime=15&mute=true')
+})
+
+// <script src="https://geo.dailymotion.com/player/xakn.js" class="video-container" data-video="x84sh87" data-params="startTime=15&mute=true&loop=true"></script>
+test("With player, video & params parameter, renders a player script with data-video and data-params attributes", () => {
+	
+	const renderTag = dailymotionTag(['player:xakn', 'video:x84sh87', 'params:startTime=15&mute=true&loop=true'])
+	const renderedNode = parse(renderTag).firstChild
+
+	assert(renderedNode.tagName === 'SCRIPT')
+	assert(renderedNode.getAttribute('src') === 'https://geo.dailymotion.com/player/xakn.js')
+	assert(renderedNode.classList.contains('video-container'))
+	assert(renderedNode.getAttribute('data-video') === 'x84sh87')
+	assert(renderedNode.getAttribute('data-playlist') === undefined)
+	assert(renderedNode.getAttribute('data-params') === 'startTime=15&mute=true&loop=true')
+})
+
+// <script src="https://geo.dailymotion.com/player/xakn.js" class="video-container" data-video="x84sh87" data-params="logo=false&customConfig[customParams]=test%2Fvalue%3D1234%26value2%3D3214"></script>
+test("With player, video & params parameter, renders a player script with data-video and data-params attributes", () => {
+	
+	const renderTag = dailymotionTag(['player:xakn', 'video:x84sh87', 'params:logo=false&customConfig[customParams]=test%2Fvalue%3D1234%26value2%3D3214'])
+	const renderedNode = parse(renderTag).firstChild
+
+	assert(renderedNode.tagName === 'SCRIPT')
+	assert(renderedNode.getAttribute('src') === 'https://geo.dailymotion.com/player/xakn.js')
+	assert(renderedNode.classList.contains('video-container'))
+	assert(renderedNode.getAttribute('data-video') === 'x84sh87')
+	assert(renderedNode.getAttribute('data-playlist') === undefined)
+	assert(renderedNode.getAttribute('data-params') === 'logo=false&customConfig[customParams]=test%2Fvalue%3D1234%26value2%3D3214')
+})
+
+
