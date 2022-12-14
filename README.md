@@ -50,7 +50,7 @@ will inject the following into hexo rendered page or post
 <script src="https://geo.dailymotion.com/player/xakn.js" data-playlist="x79dlo"></script>
 ```
 
-#### Embed a video and aplaylist
+#### Embed a video and a playlist
 
 ```
 {% dailymotion player:xakn video:x84sh87 playlist:x79dlo %}
@@ -70,4 +70,25 @@ will inject the following into hexo rendered page or post
 will inject the following into hexo rendered page or post
 ``` html
 <script src="https://geo.dailymotion.com/player.js" data-video="x84sh87"></script>
+```
+
+
+#### Embed a player with parameters
+
+```
+{% dailymotion player:xakn video:x84sh87 params:startTime=15 %}
+
+```
+will inject the following into hexo rendered page or post
+``` html
+<script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" data-params="startTime=15"></script>
+```
+---
+```
+{% dailymotion player:xakn video:x84sh87 params:startTime=15&mute=true&loop=true %}
+
+```
+will inject the following into hexo rendered page or post
+``` html
+<script src="https://geo.dailymotion.com/player/xakn.js" data-video="x84sh87" data-params="startTime=15&mute=true&loop=true"></script>
 ```
